@@ -1,0 +1,572 @@
+@import './../config/variables';
+
+.portada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 40rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 1440px) {
+        height: calc(0.4444 * 100vw);
+    }
+
+    h1 {
+        color: black;
+        font-family: 'CairoLight';
+        font-size: 3.12rem;
+        line-height: 5.9rem;
+        z-index: 2;
+
+        @media (max-width: 1440px) {
+            font-size: calc(0.035 * 100vw);
+            line-height: calc(0.065 * 100vw);
+        }
+
+        span {
+            font-family: 'CairoBold';
+        }
+    }
+
+    img {
+        width: 90rem;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+
+        @media (max-width: 1440px) {
+            width: 100%;;
+        }
+    }
+}
+
+.addComment {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #77777744;
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 15;
+
+
+    &__modal {
+        width: 60rem;
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(32, 32, 32);
+        border-radius: 0.75rem;
+        box-shadow: 0px 0px 5px 5px grey;
+
+        label {
+            color: white;
+            font-family: 'CairoBold';
+            text-align: end;
+            align-self: flex-start;
+            margin-left: 10%;
+        }
+
+        input, textarea {
+            width: 80%;
+            color: white;
+            font-family: 'CairoRegular';
+            font-size: 1.5rem;
+            padding-left: 1rem;
+            background-color: rgb(32, 32, 32);
+            border: 1px solid #777777;
+            border-radius: 0.5rem;
+        }
+
+        input {
+            height: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        textarea {
+            height: 13rem;
+            resize: none;
+
+            &::-webkit-scrollbar {
+                -webkit-appearance: none;
+            }
+
+            &::-webkit-scrollbar:vertical {
+                width: 0.4rem;
+            }
+
+            &::-webkit-scrollbar:horizontal {
+                height: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                width: 0.1rem;
+                background-color: #777777;
+                border-radius: 20px;
+                border: 2px solid #777777;
+            }
+
+            &::-webkit-scrollbar-corner-present{
+                display: none;
+            }
+
+            &::-webkit-scrollbar-bottom {
+                display: none;
+            }
+        }
+
+        p {
+            color: white;
+            font-family: 'CairoRegular';
+        }
+
+        .btn {
+            margin: 2rem 0;
+        }
+    }
+
+    &__close {
+        width: 100%;
+        height: 1rem;
+        line-height: 2rem;
+        margin-right: 0.4rem;
+        position: relative;
+
+        p {
+            color: #777777;
+            font-family: 'CairoBold';
+            position: absolute;            
+            right: 0.5rem;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.newComment {
+    display: none;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 66rem;
+    min-height: 44rem;
+    margin: 4rem 0;
+    position: relative;
+
+    @media (max-width: 1440px) {
+        width: 95%;;
+    }
+
+    &__nav {
+        display: flex;
+        width: 100%;
+        height: 4rem;
+
+        &Item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            background-color: black;
+            border-radius: 1rem 1rem 0 0;     
+            
+            &:hover {
+                cursor: pointer; 
+            }
+            
+            h2 {
+                color: white;
+                font-family: 'CairoBold';
+                font-size: 2rem;    
+                
+                @media (max-width: 800px) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            
+        }
+    }
+
+    &__sec {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        min-height: 40rem;
+        background-color: rgba(32, 32, 32, 0.93);
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    &__comment {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 12rem;
+        margin-top: 2rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__imgDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 7rem;
+        height: 100%;        
+
+        img {
+            width: 5rem;
+            height: 5rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &__descDiv {
+        width: 70%;
+        height: 100%;
+
+        h2 {
+            color: white;
+            font-family: 'CairoBold';
+            font-size: 2rem;
+        }
+
+        p {
+            color: white;
+            font-family: 'CairoLight';
+            font-size: 1.12rem;
+            margin-bottom: 1rem;
+
+            span {
+                font-family: 'CairoBold';
+            }
+        }
+    }
+
+    &__actionDiv {
+        width: 15%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__actions {
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+
+        div {
+            width: 4rem;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+
+            p {
+                color: white;
+                font-family: 'CairoLight';
+                font-size: 1.12rem;
+                margin-left: 1rem;
+            }
+            
+            img {
+                max-width: 40%;
+                max-height: 80%;
+            }
+        }
+    }
+}
+
+.backBtn {
+    color: white;
+    font-family: 'CairoBold';
+    font-size: 1.5rem;
+    align-self: flex-start;
+    margin-top: 2rem;
+    cursor: pointer;
+
+    &:hover {
+        color: #D251FF;
+    }
+}
+
+.comment {
+    width: 66rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+    background-color: rgba(32, 32, 32, 0.93);
+    border-radius: 1rem;
+
+    &__comment {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    &__imgDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 7rem;
+        height: 100%;        
+
+        img {
+            width: 5rem;
+            height: 5rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &__descDiv {
+        width: 70%;
+        height: 100%;
+
+        h2 {
+            color: white;
+            font-family: 'CairoBold';
+            font-size: 2rem;
+        }
+
+        p {
+            color: white;
+            font-family: 'CairoLight';
+            font-size: 1.12rem;
+
+            span {
+                font-family: 'CairoBold';
+            }
+        }
+    }
+
+    &__actionDiv {
+        width: 15%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .btn {
+            transform: scale(0.5);
+        }
+
+        .del {
+            height: 2rem;
+
+            button:before {
+                background-color: red;
+                box-shadow: 0 0 10px red,
+                0 0 30px red, 
+                0 0 50px red;
+            }
+
+            button div {
+                background-color: red;
+                box-shadow: 0 0 15px red, 0 0 30px red, 0 0 50px red;
+            }
+        }
+    }
+
+    &__actions {
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+        position: relative;
+
+        div {
+            width: 4rem;
+            height: 2rem;
+            display: flex;
+            flex-direction: row;
+            overflow: visible;
+
+            p {
+                color: white;
+                font-family: 'CairoLight';
+                font-size: 1.12rem;
+                margin-left: 1rem;
+            }
+
+            img {
+                max-width: 40%;
+                max-height: 80%;
+            }
+        }
+    }
+
+    &__replyDiv {
+        width: 80%;
+        height: auto;
+        margin-left: 6%;
+        margin-top: 2rem;
+    }
+}
+
+.reply {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+
+    &__comment {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 0rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__imgDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 7rem;
+        height: 100%;        
+
+        img {
+            width: 5rem;
+            height: 5rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &__descDiv {
+        width: 70%;
+        height: 100%;
+
+        h2 {
+            color: white;
+            font-family: 'CairoBold';
+            font-size: 1rem;
+        }
+
+        p {
+            color: white;
+            font-family: 'CairoLight';
+            font-size: 1rem;
+
+            span {
+                font-family: 'CairoBold';
+            }
+        }
+    }
+
+    &__actionDiv {
+        width: 15%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .btn {
+            height: 2rem;
+            transform: scale(0.5);
+            position: relative;
+            top: -1rem;
+        }
+
+        .del {
+            height: 1rem;
+            transform: scale(0.45);
+
+            button:before {
+                background-color: red;
+                box-shadow: 0 0 10px red,
+                0 0 30px red, 
+                0 0 50px red;
+            }
+
+            button div {
+                background-color: red;
+                box-shadow: 0 0 15px red, 0 0 30px red, 0 0 50px red;
+            }
+        }
+    }
+
+    &__actions {
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+        position: relative;
+
+        div {
+            width: 4rem;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+
+            p {
+                color: white;
+                font-family: 'CairoLight';
+                font-size: 1.12rem;
+                margin-left: 1rem;
+            }
+
+            img {
+                max-width: 40%;
+                max-height: 80%;
+            }
+        }
+    }
+}
+
+.likeList {
+    display: none;
+    width: 10rem;
+    max-height: 10rem;
+    list-style: none;
+    background-color: rgba(32, 32, 32, 0.98);
+    position: absolute;
+    top: 2rem;
+    left: 0rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.25rem 0.25rem rgb(65, 64, 64);
+    z-index: 2;
+    overflow: scroll;
+
+    li {
+        width: 10rem;
+        margin-left: 0.5rem;
+        color: white;
+        font-family: 'CairoLight';
+        font-size: 1.12rem;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+        position: relative;
+        left: 10rem;
+    }
+}

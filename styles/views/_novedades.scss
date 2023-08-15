@@ -1,0 +1,289 @@
+@import '../config/variables';
+
+#addNovedad {
+    margin-top: 1rem;
+}
+
+.novedades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &__novedad {        
+        width: 90rem;
+        min-height: 20rem;
+        margin: 2rem;
+        border-radius: 0.5rem;
+        padding-bottom: 2rem;
+        background-color: rgba(32, 32, 32, 0.9);
+        position: relative;
+
+        p {
+            color: white;
+            max-width: 75%;
+            font-size: 1.2rem;
+            font-family: 'CairoLight';
+            font-weight: 400;
+            margin: 0 0 0.5rem 2rem;
+
+            span {
+                font-family: 'CairoBold';
+            }
+
+            a {
+                text-decoration: underline;
+                color: white;
+                font-size: 1rem;
+                font-family: 'CairoBold';
+                font-weight: 400;
+
+                &:hover {
+                    color: #D251FF;
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+
+        .divDato {
+            position: relative;
+
+            input {
+                width: 48%;
+                height: 2rem;
+                color: white;
+                font-family: 'CairoLight'; 
+                font-size: 1.25rem;
+                padding-left: 1rem;
+                background-color: rgb(32, 32, 32);
+                border: 2px solid #777777;
+                border-radius: 0.5rem;
+                position: absolute;
+                top: 0rem;
+                left: 2rem;
+            }
+        }
+
+        .btn {
+            margin: 2rem;            
+        }
+
+        button {
+            margin-left: 2rem;
+        }
+    }  
+
+    &__novedadDiv {
+        height: auto;
+        overflow: hidden;
+
+        h2 {
+            color: #D251FF;
+            font-size: 2.5rem;
+            font-family: 'CairoBold';
+            font-weight: 400;
+            margin: 0 2rem 2rem 2rem;
+        }
+
+        p {
+            color: white;
+            max-width: 75%;
+            font-size: 1.2rem;
+            font-family: 'CairoLight';
+            font-weight: 400;
+            margin: 0 0 0.5rem 2rem;
+
+            span {
+                font-family: 'CairoBold';
+            }
+
+            a {
+                text-decoration: underline;
+                color: white;
+                font-size: 1rem;
+                font-family: 'CairoBold';
+                font-weight: 400;
+
+                &:hover {
+                    color: #D251FF;
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+
+        input {
+            width: 48%;
+            height: 2.5rem;
+            color: white;
+            font-family: 'CairoLight'; 
+            font-size: 1.25rem;
+            padding-left: 1rem;
+            background-color: rgb(32, 32, 32);
+            border: 2px solid #777777;
+            border-radius: 0.5rem;
+            position: absolute;
+            top: 1rem;
+            left: 2rem;
+        }
+
+        textarea {
+            width: 48%;
+            height: 0;
+            max-height: 22rem;
+            color: white;
+            font-family: 'CairoLight'; 
+            font-size: 1.25rem;
+            padding-left: 1rem;
+            background-color: rgb(32, 32, 32);
+            border: 2px solid #777777;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            position: absolute;
+            top:5rem;
+            left: 2rem;
+        }
+
+        button { 
+            margin-left: 2rem;
+        }
+    }
+    
+    &__imgDiv {
+        width: 40rem;
+        height: auto;
+        margin: 2rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        float: right;
+
+        img {
+            max-width: 100%;
+            max-height: 90%;
+        }
+
+        input {
+            height: 2.5rem;
+            width: 100%;
+            position: relative;
+            color: white;
+            font-family: 'CairoLight'; 
+            font-size: 1.25rem;
+            padding-left: 1rem;
+            background-color: rgba(32, 32, 32, 0);
+            border: none;
+            border-radius: 0;
+        }
+    }
+}
+
+.editNovedad {
+    display: none;
+}
+
+.novedadForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &__novedad {        
+        width: 90rem;
+        min-height: 20rem;
+        margin: 2rem;
+        border-radius: 0.5rem;
+        padding-bottom: 2rem;
+        background-color: rgba(32, 32, 32, 0.9);
+        position: relative;
+
+        .addDato {
+            display: block;
+            width: 48%;
+            height: 2rem;
+            margin: 0.5rem 2rem;
+            color: white;
+            font-family: 'CairoLight'; 
+            font-size: 1.25rem;
+            padding-left: 1rem;
+            background-color: rgb(32, 32, 32);
+            border: 2px solid #777777;
+            border-radius: 0.5rem;
+        }
+
+        button {
+            margin: 2rem;
+        }
+    }  
+
+    &__novedadDiv {
+        height: auto;
+        overflow: hidden;
+
+        input {
+            width: 48%;
+            height: 2.5rem;
+            color: white;
+            font-family: 'CairoLight'; 
+            font-size: 1.25rem;
+            padding-left: 1rem;
+            background-color: rgb(32, 32, 32);
+            border: 2px solid #777777;
+            border-radius: 0.5rem;
+            position: absolute;
+            top: 1rem;
+            left: 2rem;
+        }
+
+        textarea {
+            width: 48%;
+            height: 20rem;
+            color: white;
+            font-family: 'CairoLight'; 
+            font-size: 1.25rem;
+            padding-left: 1rem;
+            background-color: rgb(32, 32, 32);
+            border: 2px solid #777777;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+            position: absolute;
+            top:5rem;
+            left: 2rem;
+        }
+    }
+    
+    &__imgDiv {
+        width: 40rem;
+        min-height: 22rem;
+        margin: 2rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        float: right;
+
+        img {
+            max-width: 100%;
+            max-height: 90%;
+        }
+
+        input {
+            height: 2.5rem;
+            width: 100%;
+            position: relative;
+            color: white;
+            font-family: 'CairoLight'; 
+            font-size: 1.25rem;
+            padding-left: 1rem;
+            background-color: rgba(32, 32, 32, 0);
+            border: none;
+            border-radius: 0;
+        }
+    }
+}

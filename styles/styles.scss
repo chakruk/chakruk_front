@@ -1,0 +1,33 @@
+@import './config/variables';
+@import './views/registration';
+
+@import './views/home';
+@import './views/preventas';
+@import './views/perfil';
+@import './views/novedades';
+@import './views/historia';
+@import './views/comunidad';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: relative;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.admin {
+    display: none;
+}

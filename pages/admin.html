@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="icon" type="image/x-icon" href="../img/favicon.png" />
+  <title>Dashboard de Admin</title>
+</head>
+
+<body>
+
+  <!-- ======================================== -->
+  <!-- CONTENIDO QUE SE REPITE EN TODO LOS HTML -->
+  <!-- ======================================== -->
+  <header class="header">
+    <div class="header__main">
+      <div class="header__logo">
+        <img src="../img/logo.png" alt="logo" />
+      </div>
+      <div class="header__title">
+        <h1>
+          <a href="../index.html"><span id="navSelected">Chakruk |</span> Geometrical Strategic
+            Tool</a>
+        </h1>
+      </div>
+    </div>
+
+    <div class="header__navbar">
+      <div class="header__navbarItem">
+        <h2><a href="../pages/preventa.html">Preventa</a></h2>
+      </div>
+      <div class="header__navbarItem">
+        <h2><a href="../pages/novedades.html">Novedades</a></h2>
+      </div>
+      <div class="header__navbarItem">
+        <h2><a href="../pages/comunidad.html">Comunidad</a></h2>
+      </div>
+      <div class="header__login header__navbarItem">
+        <h2>
+          <a id="loginSelected" class="header__loginButton" href="#">Login</a>
+        </h2>
+      </div>
+    </div>
+  </header>
+
+  <div class="msjDiv">
+    <div class="header__msj">
+      <div class="text">
+        <h2 id="msjTitle"></h2>
+        <p id="msjDesc"></p>
+      </div>
+      <div class="btn">
+        <button id="msjBtnCancel">
+          <span>CANCELAR</span>
+          <div class="top"></div>
+          <div class="left"></div>
+          <div class="bottom"></div>
+          <div class="right"></div>
+        </button>
+      </div>
+      <div class="btn">
+        <button id="msjBtn">
+          <span>ACEPTAR</span>
+          <div class="top"></div>
+          <div class="left"></div>
+          <div class="bottom"></div>
+          <div class="right"></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__loginForm">
+    <div class="header__loginUser">
+      <button class="header__close">X</button>
+      <label for="user">Nombre de Usuario o Email</label>
+      <input type="text" name="user" id="user" />
+      <label for="pass">Password</label>
+      <input type="password" name="pass" id="pass" />
+      <p class="header__loginFormMsj"></p>
+
+      <div class="header__loginBtns">
+        <div class="btn">
+          <button class="btn__registro" id="registBtn">
+            <span>REGISTRAR</span>
+            <div class="top"></div>
+            <div class="left"></div>
+            <div class="bottom"></div>
+            <div class="right"></div>
+          </button>
+        </div>
+
+        <div class="btn">
+          <button id="loginBtn">
+            <span>INGRESAR</span>
+            <div class="top"></div>
+            <div class="left"></div>
+            <div class="bottom"></div>
+            <div class="right"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__regist">
+      <button class="header__close">X</button>
+      <h2>Información Personal</h2>
+      <form class="header__form">
+        <div class="header__registUsername">
+          <label for="username">Nombre de usuario</label>
+          <input type="text" name="username" placeholder="ingrese nombre de usuario" id="username" required />
+        </div>
+        <div class="header__registName">
+          <div>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="ingrese su nombre" required />
+          </div>
+          <div>
+            <label for="lastName">Apellido</label>
+            <input type="text" name="LastName" id="LastName" placeholder="ingrese su apellido" required />
+          </div>
+        </div>
+        <div class="header__registEmail">
+          <label for="email">Correo Electrónico</label>
+          <input type="text" name="email" id="email" required
+            placeholder="Ingrese su correo electrónico personal gmail o hotmail" />
+        </div>
+        <div class="header__registDiv">
+          <div class="header__registPassDiv">
+            <div class="header__registPass">
+              <label for="passReg">Ingrese su Contraseña</label>
+              <input class="header__registPassIn" type="password" name="passReg" id="passReg"
+                placeholder="8 caracteres min." required />
+            </div>
+            <div class="header__registPass">
+              <label for="repass">Repita su Contraseña</label>
+              <input class="header__registPassIn" type="password" name="repass" id="repass"
+                placeholder="8 caracteres min." required />
+            </div>
+          </div>
+
+          <div class="header__registImg">
+            <div class="header__registSel">
+              <div>
+                <label for="imgSelect">Avatar</label>
+                <select name="imgSelect" id="imgSelect">
+                  <option value="rey" selected>Rey</option>
+                  <option value="reina">Reina</option>
+                  <option value="alfil">Alfil</option>
+                  <option value="caballo">Caballo</option>
+                  <option value="torre">Torre</option>
+                  <option value="peon">Peon</option>
+                </select>
+              </div>
+              <div>
+                <label for="imgColor">Facción</label>
+                <select name="imgColor" id="imgColor">
+                  <option value="animal" selected>Animal</option>
+                  <option value="mech">Mech</option>
+                </select>
+              </div>
+            </div>
+            <div class="header__registImgDiv">
+              <img id="header__avatar" src="" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="btn">
+          <button id="createBtn" type="submit" disabled>
+            <span>CREAR CUENTA</span>
+            <div class="top"></div>
+            <div class="left"></div>
+            <div class="bottom"></div>
+            <div class="right"></div>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- ======================================== -->
+  <!-- 									FIN										  -->
+
+  <div class="sections">
+    <div class="closeSession">
+      <div class="btn">
+        <button id="closeSession">
+          <span>CERRAR SESIÓN</span>
+          <div class="top"></div>
+          <div class="left"></div>
+          <div class="bottom"></div>
+          <div class="right"></div>
+        </button>
+      </div>
+    </div>
+    <div style="margin-top: 2rem;">
+        <button id="obtener-usuarios">ver lista usuarios</button>
+    </div>
+    <div class="perfil">
+      <div class="perfil__img">
+        <div class="perfil__imgImg">
+          <img id="avatar" src="" alt="" />
+        </div>
+
+        <div class="perfil__imgSel">
+          <div>
+            <label for="perfilImgSelect">Avatar</label>
+            <select name="perfilImgSelect" id="perfilImgSelect">
+              <option value="" selected disabled>-</option>
+              <option value="rey">Rey</option>
+              <option value="reina">Reina</option>
+              <option value="alfil">Alfil</option>
+              <option value="caballo">Caballo</option>
+              <option value="torre">Torre</option>
+              <option value="peon">Peon</option>
+            </select>
+          </div>
+          <div>
+            <label for="perfilImgColor">Facción</label>
+            <select name="perfilImgColor" id="perfilImgColor">
+              <option value="" selected disabled>-</option>
+              <option value="animal">Animal</option>
+              <option value="mech">Mech</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="perfil__info">
+        <h2 class="perfil__h2">Información personal</h2>
+
+        <div class="perfil__username">
+          <h4>Username</h4>
+          <p class="dato" id="perfilUsername"></p>
+          <input class="editDato" type="text" name="perfilUsername" id="perfilUsernameInput" placeholder="Username" />
+        </div>
+
+        <div class="perfil__fullName">
+          <div class="perfil__name">
+            <h4>Nombre</h4>
+            <p class="dato" id="perfilName"></p>
+            <input class="editDato" type="text" name="perfilName" id="perfilNameInput" placeholder="Nombre" />
+          </div>
+
+          <div class="perfil__lastname">
+            <h4>Apellido</h4>
+            <p class="dato" id="perfilLastname"></p>
+            <input class="editDato" type="text" name="perfilLastname" id="perfilLastnameInput" placeholder="Apellido" />
+          </div>
+        </div>
+
+        <div class="perfil__email">
+          <h4>Correo electrónico</h4>
+          <p class="dato" id="perfilEmail"></p>
+        </div>
+
+        <div class="perfil__btns">
+          <div class="btn changePass">
+            <button id="changePass">
+              <span>CAMBIAR CONTRASEÑA</span>
+              <div class="top"></div>
+              <div class="left"></div>
+              <div class="bottom"></div>
+              <div class="right"></div>
+            </button>
+          </div>
+          <div class="btn savePerfil">
+            <button id="savePerfil">
+              <span>GUARDAR</span>
+              <div class="top"></div>
+              <div class="left"></div>
+              <div class="bottom"></div>
+              <div class="right"></div>
+            </button>
+          </div>
+        </div>
+
+        <div class="perfil__changePassDiv">
+          <div class="perfil__changePass">
+            <button class="perfil__changePassClose">X</button>
+            <form class="perfil__changePassForm">
+              <div class="perfil__passDiv oldPass">
+                <label for="passReg">Ingrese su Antigüa Contraseña</label>
+                <input class="perfil__passIn" placeholder="8 caracteres min." type="password" name="oldPass"
+                  id="oldPass" required />
+              </div>
+              <div class="perfil__passDiv">
+                <label for="passReg">Ingrese su Nueva Contraseña</label>
+                <input class="perfil__passIn perfilPassCheck" placeholder="8 caracteres min." type="password"
+                  name="newPass" id="newPass" required />
+              </div>
+              <div class="perfil__passDiv">
+                <label for="repass">Repita su Nueva Contraseña</label>
+                <input class="perfil__passIn perfilPassCheck" type="password" name="reNewPass" id="reNewPass"
+                  required />
+              </div>
+
+              <div class="btn savePass">
+                <button id="savePass" type="submit">
+                  <span>CAMBIAR</span>
+                  <div class="top"></div>
+                  <div class="left"></div>
+                  <div class="bottom"></div>
+                  <div class="right"></div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="perfil__settings">
+        <div class="perfil__notificaciones">
+          <h4>Notificaciones</h4>
+          <img id="notifIcon" src="./../img/notificacionOn.png" alt="Notif_On" />
+        </div>
+
+        <div class="perfil__perfil">
+          <h4 id="miPerfil">Mi perfil</h4>
+          <img id="perfilIcon" src="./../img/perfilOn.png" alt="Perfil" />
+        </div>
+
+        <div class="perfil__edit">
+          <h4 id="editPerfil">Editar</h4>
+          <img id="editIcon" src="./../img/editOff.png" alt="Editar" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__chacruk">
+      <div class="footer__logo">
+        <a href="https://www.instagram.com/designumsignum/" target="_blank">
+          <img class="footer__img" src="./../img/Designum Marca.png" />
+        </a>
+      </div>
+
+      <div class="footer__contacto">
+        <p><span>Contacto</span></p>
+        <p>(0261) 339 8802</p>
+        <p>designumsignum@gmail.com</p>
+      </div>
+
+      <div class="footer__redes">
+        <div>
+          <a title="Whatsapp" href="https://api.whatsapp.com/send?phone=2613398802&text=Hola+quiero+info"
+            target="_blank">
+            <img src="../img/wp.png" />
+          </a>
+        </div>
+        <div>
+          <a title="Instagram" href="https://www.instagram.com/leobuccio/" target="_blank">
+            <img src="../img/ig.png" />
+          </a>
+        </div>
+        <div>
+          <a title="Facebook" href="https://www.facebook.com/Leobucciolima/" target="_blank">
+            <img src="../img/fb.png" />
+          </a>
+        </div>
+        <div>
+          <a title="Youtube" href="https://www.youtube.com/@chakruk1958" target="_blank">
+            <img src="../img/yt.png" />
+          </a>
+        </div>
+        <div>
+          <a title="Discord" href="https://discord.com/invite/5QKkh9WB66" target="_blank">
+            <img src="../img/dc.png" />
+          </a>
+        </div>
+        <div>
+          <a title="Twitch" href="https://www.twitch.tv/leobuccio" target="_blank">
+            <img src="../img/tw.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__semillero">
+      <p>Powered by</p>
+      <a href="https://semillero.tech/">
+        <img src="../../img/quintoImpactoHorizontal.png" alt="" />
+      </a>
+      <a href="https://semillero.tech/">
+        <img src="../../img/semillero.png" alt="" />
+      </a>
+    </div>
+  </footer>
+  <script type="module" src="../js/admin.js"></script>
+  <script type="module" src="../js/global.js"></script>
+  <script type="module" src="../js/perfil.js"></script>
+</body>
+
+</html>

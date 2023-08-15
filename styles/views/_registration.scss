@@ -1,0 +1,74 @@
+@import '../config/variables';
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 15rem);
+    padding-top: 5rem;
+    border: $b;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25rem;
+        height: 20rem;
+        border: $b;
+    }
+
+    &__user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-top: 1rem;
+
+        label {
+            width: 20%;
+        }
+
+        input {
+            width: 60%;
+        }
+    }
+
+    &__pass {        
+        width: 90%;
+        margin-top: 2rem;
+    }
+
+    &__passPass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+        input {
+            width: 60%;
+        }
+    }
+
+    &__passRepass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 1rem;
+        
+        input {
+            width: 60%;
+        }
+    }
+
+    &__checkPass {
+
+    }
+
+    &__button {
+        width: 10rem;
+        height: 1.3rem;
+        margin-top: 3rem;
+    }
+}

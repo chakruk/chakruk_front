@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
+  <title>Chakruk | Home</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__main">
+      <div class="header__logo">
+        <img src="./img/logo.png" alt="logo" />
+      </div>
+      <div class="header__title">
+        <h1>
+          <a href="index.html"><span id="navSelected">Chakruk |</span> Geometrical Strategic
+            Tool</a>
+        </h1>
+      </div>
+    </div>
+
+    <div class="header__navbar">
+      <div class="header__navbarItem">
+        <h2><a href="pages/preventa.html">Preventa</a></h2>
+      </div>
+      <div class="header__navbarItem">
+        <h2><a href="pages/novedades.html">Novedades</a></h2>
+      </div>
+      <div class="header__navbarItem">
+        <h2><a href="./pages/comunidad.html">Comunidad</a></h2>
+      </div>
+      <div class="header__login header__navbarItem">
+        <h2>
+          <a id="loginSelected" class="header__loginButton" href="#">Login</a>
+        </h2>
+      </div>
+    </div>
+  </header>
+
+  <div class="msjDiv">
+    <div class="header__msj">
+      <div class="text">
+        <h2 id="msjTitle"></h2>
+        <p id="msjDesc"></p>
+      </div>
+      <div class="btn">
+        <button id="msjBtn">
+          <span>ACEPTAR</span>
+          <div class="top"></div>
+          <div class="left"></div>
+          <div class="bottom"></div>
+          <div class="right"></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__loginForm">
+    <div class="header__loginUser">
+      <button class="header__close">X</button>
+      <label for="user">Nombre de Usuario o Email</label>
+      <input type="text" name="user" id="user" />
+      <label for="pass">Password</label>
+      <input type="password" name="pass" id="pass" />
+      <p class="header__loginFormMsj"></p>
+
+      <div class="header__loginBtns">
+        <div class="btn">
+          <button class="btn__registro" id="registBtn">
+            <span>REGISTRAR</span>
+            <div class="top"></div>
+            <div class="left"></div>
+            <div class="bottom"></div>
+            <div class="right"></div>
+          </button>
+        </div>
+
+        <div class="btn">
+          <button id="loginBtn">
+            <span>INGRESAR</span>
+            <div class="top"></div>
+            <div class="left"></div>
+            <div class="bottom"></div>
+            <div class="right"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__regist">
+      <button class="header__close">X</button>
+      <h2>Información Personal</h2>
+      <form class="header__form">
+        <div class="header__registUsername">
+          <label for="username">Nombre de usuario</label>
+          <input type="text" name="username" placeholder="ingrese nombre de usuario" id="username" required />
+        </div>
+        <div class="header__registName">
+          <div>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="ingrese su nombre" required />
+          </div>
+          <div>
+            <label for="lastName">Apellido</label>
+            <input type="text" name="LastName" id="LastName" placeholder="ingrese su apellido" required />
+          </div>
+        </div>
+        <div class="header__registEmail">
+          <label for="email">Correo Electrónico</label>
+          <input type="text" name="email" id="email" required
+            placeholder="Ingrese su correo electrónico personal gmail o hotmail" />
+        </div>
+        <div class="header__registDiv">
+          <div class="header__registPassDiv">
+            <div class="header__registPass">
+              <label for="passReg">Ingrese su Contraseña</label>
+              <input class="header__registPassIn" type="password" name="passReg" id="passReg"
+                placeholder="8 caracteres min." required />
+            </div>
+            <div class="header__registPass">
+              <label for="repass">Repita su Contraseña</label>
+              <input class="header__registPassIn" type="password" name="repass" id="repass"
+                placeholder="8 caracteres min." required />
+            </div>
+          </div>
+
+          <div class="header__registImg">
+            <div class="header__registSel">
+              <div>
+                <label for="imgSelect">Avatar</label>
+                <select name="imgSelect" id="imgSelect">
+                  <option value="rey" selected>Rey</option>
+                  <option value="reina">Reina</option>
+                  <option value="alfil">Alfil</option>
+                  <option value="caballo">Caballo</option>
+                  <option value="torre">Torre</option>
+                  <option value="peon">Peon</option>
+                </select>
+              </div>
+              <div>
+                <label for="imgColor">Facción</label>
+                <select name="imgColor" id="imgColor">
+                  <option value="animal" selected>Animal</option>
+                  <option value="mech">Mech</option>
+                </select>
+              </div>
+            </div>
+            <div class="header__registImgDiv">
+              <img id="header__avatar" src="" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="btn">
+          <button id="createBtn" type="submit" disabled>
+            <span>CREAR CUENTA</span>
+            <div class="top"></div>
+            <div class="left"></div>
+            <div class="bottom"></div>
+            <div class="right"></div>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="sections">
+    <section class="carrusel">
+      <div class="carrusel__main"></div>
+
+      <div class="carrusel__navbar">
+        <div class="carrusel__navbar__left" id="left">
+          <p>⟨</p>
+        </div>
+
+        <div class="carrusel__navbar__min"></div>
+
+        <div class="carrusel__navbar__right" id="right">
+          <p>⟩</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="combosPrev">
+      <div class="combosPrev__divText">
+        <h3>Recompensas</h3>
+        <br />
+        <p>
+          Son una serie de descuentos y exclusividades que premian tu
+          participación en la venta anticipada.
+        </p>
+        <p>
+          Para recompensarte por tu interés en el producto te daremos objetos
+          de valor de colección que no estarán disponibles luego de la
+          preventa.
+        </p>
+        <p>
+          Los descuentos serán de entre el 20% y 50% del valor de salida al
+          mercado.
+        </p>
+
+        <div class="btn">
+          <button id="recompensa_btn">
+            <span>VER MAS COMBOS</span>
+            <div class="top"></div>
+            <div class="left"></div>
+            <div class="bottom"></div>
+            <div class="right"></div>
+          </button>
+        </div>
+      </div>
+
+      <div class="combosPrev__combos"></div>
+    </section>
+
+    <section class="info">
+      <div class="info__navbar">
+        <ul>
+          <li class="info__navbarTitle" onclick="select(0)">¿Por Qué?</li>
+          <li class="info__navbarTitle" onclick="select(1)">Historia</li>
+          <li class="info__navbarTitle" onclick="select(2)">Personajes</li>
+          <li class="info__navbarTitle" onclick="select(3)">Geometría</li>
+          <li class="info__navbarTitle" onclick="select(4)">Arquitectura</li>
+          <li class="info__navbarTitle" onclick="select(5)">La Guerra</li>
+        </ul>
+      </div>
+
+      <div class="info__descripciones">
+        <div class="info__descripciones__title" onclick="select(0)">
+          <h3>¿Que es Chakruk?</h3>
+          <h4 id="info__descripciones__title0">⟩</h4>
+        </div>
+
+        <div class="info__porque info__desc">
+          <img class="info__descPortada" src="./../img/porque.jpg" alt="" />
+          <div class="info__textCentrado">
+            <p>
+              Chakruk es antes que nada una propuesta imposible, es la
+              apertura de ojos ante un símbolo inconmesurablemente inmutable.
+              Esto se debe a que es la única propuesta geométrica que busca en
+              otro lugar diferente a un espacio ortogonal para relizar
+              pensamiento estratégico
+            </p>
+            <p>
+              Pero no es solo eso lo que lo hace un propuesta imposible, sino
+              el hecho de buscar y encontrar en un espacio hexagonal una
+              optimización en la lectura de las posibilidades geométricas
+              intentando no solo ser una alternativa sino una mejora a lo que
+              ya conocíamos.
+            </p>
+            <p>
+              Chakruk es la búsqueda de lo imposible en todos y cada uno de
+              sus detalles, escondido tan cerca que no debe ser descubierto,
+              solo debe ser jugado.
+            </p>
+            <p>
+              Chakruk es la unión de 2 palabras claves en la historia del
+              ajedrez. Por un lado Chaturanga, el primero nombre importante
+              con el cual el juego pasó a ser masivo.
+            </p>
+            <p>
+              El término Chaturanga se acuñó de chatur (que significa 'cuatro'
+              en sánscrito) y anga (que significa 'miembros'), es decir los
+              cuatro miembros que integran un ejército: infantería,
+              caballería, elefantes y carruajes.
+            </p>
+            <p>
+              Por el otro lado Makruk, se le considera el juego 'vivo' más
+              similar al antepasado común de todas las variantes del ajedrez.
+              Así nos introducimos en Chakruk, una propuesta de ajedrez
+              hexagonal que lleva la lectura del tablero y las piezas a un
+              nuevo nivel. Y así Chakruk se transforma en la palabra símbolo
+              que comunica la unión entre el pasado y el futuro del mismo
+              juego.
+            </p>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+
+        <div class="info__descripciones__title" onclick="select(1)">
+          <h3>Historia</h3>
+          <h4 id="info__descripciones__title1">⟩</h4>
+        </div>
+        <div class="info__historia info__desc">
+          <img class="info__descPortada" src="./../img/historia0.jpg" alt="" />
+          <div class="info__textCentrado">
+            <p>
+              La división del mundo en el año 4444 a.C. definió el futuro del
+              planeta. Fue entonces cuando comenzó la invasión de los humanos.
+            </p>
+            <p>
+              El desarrollo de la rueda y el uso extendido de la escritura le
+              dió al hombre un poder explosivo. El intelecto y la especulación
+              fueron suficiente para dominar territorios naturales.
+            </p>
+            <p>
+              Hasta ese momento Los Atlantis habían sido jueces y protectores
+              del equilibrio, guardando los secretos de la comunicación
+              histórica con mucho recelo.
+            </p>
+            <p>
+              Con la escritura y la rueda el humano comenzó su expansión hacia
+              territorios animales en selvas y mares, desequilibrando los
+              ciclos energéticos del ecosistema planetario.
+            </p>
+            <p>
+              Los Atlantes dieron ultimátum a los humanos para que retrocedan
+              a sus territorios históricos y actúen con sabiduría. Los
+              humanos, amenazados en sus egos, respondieron con una trampa.
+              Aceptaron retirarse y a cambio de su cese expansivo ofrecieron
+              el primer “caballo de Troya”:
+            </p>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__img">
+              <img src="./img/historia1.jpg" alt="" />
+            </div>
+            <div class="info__textAlter">
+              <p>
+                Un grupo selecto de personas sería educado por los atlantes
+                porque, según los humanos “solo con su sabiduría encontrarían
+                la paz”.
+              </p>
+              <p>
+                Pero éste era un plan en el que aprendieron algo determinante:
+                El alma responde a una motivación divina capaz de ser
+                manipulada por la apariencia. Los signos-símbolos siempre
+                habían existido, pero si sus leyes caían en manos equivocadas
+                inclinarían la balanza.
+              </p>
+              <p>
+                Los humanos hicieron su jugada y lograron imponer su voluntad
+                sobre los Atlantes resultando en su completa extinción.
+              </p>
+              <p>
+                Así se originaron las “guerras eternas”, en las que naturaleza
+                y racionalidad combatirían durante 6666 años hasta llegar a
+                esta batalla decisiva.
+              </p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__textAlter">
+              <p>
+                Los Atlantes, conocedores de las “profecías inminentes”,
+                tenían escondidos los símbolos necesarios para que nuevos
+                seres puedan acceder a su entendimiento gracias a la
+                ingenuidad de sus almas y lo genuino de sus espíritus.
+              </p>
+              <p>
+                Así, luego de que los humanos hundieran en las profundidades a
+                los Atlantes, ahora, y gracias a la sabiduría de sus ruinas,
+                seres marítimos podrían evolucionar a pasos agigantados.
+              </p>
+              <p>
+                Seres de conciencia avanzada tomaron el conocimiento y lo
+                utilizaron para equilibrar el mundo. 6666 años pasaron hasta
+                que los animales organizaron su gran batalla. 6666 años hasta
+                que la conciencia de la naturaleza estuviera a la altura del
+                intelecto alcanzado por los hombres.
+              </p>
+              <p>
+                El Pulpo/Calamar Gigante fué el primero en encontrar y aplicar
+                los conocimientos atlantes. Así, y gracias a sus
+                características distintivas, logró desarrollar su propia
+                civilización lejos de la mirada humana. Paciente, desarrolló
+                un sistema de conocimiento heredado que habita en su
+                información genética.
+              </p>
+            </div>
+            <div class="info__img">
+              <img src="./img/historia2.jpg" alt="" />
+            </div>
+          </div>
+
+          <hr />
+
+          <h4 class="info__subtitle">LA CREACIÓN DEL UNIVERSO</h4>
+
+          <div class="info__sec">
+            <div class="info__img">
+              <img src="./img/subhistoria0.jpg" alt="" />
+            </div>
+            <div class="info__textAlter">
+              <p>
+                Infinito es lo que siempre ha sido y siempre va a ser. La
+                creación siempre fue creada y será creada nuevamente por
+                siempre.
+              </p>
+              <p>Pero los universos no siempre fueron los mismos:</p>
+              <p>
+                Cuando el demiurgo creó nuestro universo lo hizo a imagen y
+                semejanza del que lo había creado a él. Y así se creó a sí
+                mismo en un nuevo universo.
+              </p>
+              <p>
+                Sus creaciones terminarían siendo creadores. Pero la historia
+                que contarían será única. Otra vez.
+              </p>
+              <p>
+                Porque el demiurgo venera a sus dioses y al mismo tiempo sus
+                dioses a los propios.
+              </p>
+            </div>
+          </div>
+
+          <hr />
+
+          <h4 class="info__subtitle">LA CREACIÓN DEL MUNDO</h4>
+
+          <div class="info__sec">
+            <div class="info__textAlter">
+              <p>
+                Para crear la creación era necesario otorgar sentido, y para
+                dar sentido todos los sistemas se basaron en la geometría. Los
+                mundos serían sistemas geométricos que danzarían entre sí para
+                alcanzar el sentido.
+              </p>
+              <p>
+                Para ello cada esfera autónoma será alimentada con la energía
+                de una estrella, la cual dará la información necesaria para
+                que las historias geométricas alcancen el milagro o “paisaje
+                sagrado”.
+              </p>
+              <p>
+                A cambio cada sistema geométrico devolverá al universo energía
+                en forma de historias hermosas, historias que alcancen el
+                sentido y luego creen nuevos universos.
+              </p>
+            </div>
+            <div class="info__img">
+              <img src="./img/subhistoria1.jpg" alt="" />
+            </div>
+          </div>
+
+          <hr />
+
+          <h4 class="info__subtitle">LA CREACIÓN DEL CREADOR</h4>
+
+          <div class="info__sec">
+            <div class="info__img">
+              <img src="./img/subhistoria2.jpg" alt="" />
+            </div>
+            <div class="info__textAlter">
+              <p>
+                El creador solo podrá ser capaz de crear universos creadores
+                si posee la geometría necesaria para hacerlo.
+              </p>
+              <p>
+                Y él fue la medida del universo. Porque su geometría explicaba
+                a todas las otras geometrías. Porque fue uno con todos sus
+                espejos.
+              </p>
+              <p>
+                Pero él también era el destructor. Porque la geometría sin el
+                propósito rompía el sentido.
+              </p>
+              <p>Y los mundos tienen otros creadores dotados de sentido.</p>
+            </div>
+          </div>
+
+          <hr />
+
+          <h4 class="info__subtitle">LOS ANIMALES</h4>
+
+          <div class="info__sec">
+            <div class="info__textAlter">
+              <p>
+                Los animales fueron las creaciones creadoras de 3er nivel
+                luego de los paisajes sagrados y las semillas.
+              </p>
+              <p>Ellos comprendían las primeras 9 geometrías.</p>
+              <p>
+                Sus sistemas de memorias heredadas predestinaban una
+                ampliación de conciencia hacia el TODO con un ritmo de
+                crecimiento equilibrado y paciente proveniente desde el centro
+                de la tierra.
+              </p>
+              <p>Los animales siempre fueron uno con la tierra.</p>
+            </div>
+            <div class="info__img">
+              <img src="./img/subhistoria3.jpg" alt="" />
+            </div>
+          </div>
+
+          <hr />
+
+          <h4 class="info__subtitle">LOS ATLANTES</h4>
+
+          <div class="info__sec">
+            <div class="info__img">
+              <img src="./img/subhistoria4.jpg" alt="" />
+            </div>
+            <div class="info__textAlter">
+              <p>
+                Nacieron de la geometría de los cristales. La luz y la
+                gravedad generaron belleza y ésta entornos y paisajes
+                sagrados.
+              </p>
+              <p>
+                Inherente a los atlantes era su paisaje y civilización
+                arquitectónica, pero más que nada lo eran los mensajes
+                atemporales en sus estructuras. Mensajes que educaban y
+                recordaban la eternidad del tiempo.
+              </p>
+              <p>
+                Su conocimiento mezclaba de forma equilibrada la sabiduría del
+                cosmos y de las profundidades de la tierra.
+              </p>
+              <p>
+                Llegaron a saber todo. A ser felices por todo. Vivían en
+                eternidad con el presente.
+              </p>
+            </div>
+          </div>
+
+          <hr />
+
+          <h4 class="info__subtitle">LOS HUMANOS</h4>
+
+          <div class="info__sec">
+            <div class="info__textAlter">
+              <p>Los humanos fueron la creación posterior a los animales.</p>
+              <p>
+                Ellos trascendieron la geometría racional e incorporaron el
+                concepto de infinito a través de la composición fractal de sus
+                cuerpos.
+              </p>
+              <p>
+                Los humanos nacieron sin este conocimiento, por lo que
+                dedicaban sus vidas a comprenderlo.
+              </p>
+            </div>
+            <div class="info__img">
+              <img src="./img/subhistoria5.jpg" alt="" />
+            </div>
+          </div>
+
+          <hr />
+
+          <h4 class="info__subtitle">LA GUERRA</h4>
+
+          <div class="info__sec">
+            <div class="info__img">
+              <img src="./img/subhistoria6.jpg" alt="" />
+            </div>
+            <div class="info__textAlter">
+              <p>
+                Atlantes y animales se unirán para salvarse de la masacre
+                desenfrenada de los humanos.
+              </p>
+              <p>
+                Los atlantes conocedores de la eternidad de las historias
+                dejaron la lucha en manos de los animales para que cuando
+                llegue el momento tomen la iniciativa y apliquen la
+                inteligencia eterna.
+              </p>
+              <p>6666 años de holocausto.</p>
+              <p>¿Serán ajusticiados?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info__descripciones__title" onclick="select(2)">
+          <h3>Personajes</h3>
+          <h4 id="info__descripciones__title2">⟩</h4>
+        </div>
+        <div class="info__personajes info__desc">
+          <div class="info__sec">
+            <div class="info__img">
+              <img src="./img/uruk.jpg" alt="" />
+            </div>
+            <div class="info__textAlter start">
+              <h3>| URUK |</h3>
+              <p>
+                <span>Pulpo/Calamar Gigante de mil años comanda las 12
+                  direcciones. Sus conocimientos le permiten dirigir
+                  estrategias que fluyen como música.</span>
+              </p>
+              <p class="iFirst">
+                <i>Rol: Mente maestra. Idea el plan a largo plazo.</i>
+              </p>
+              <p><i>Habilidad: Coordina ataques simultaneos.</i></p>
+              <p>
+                <i>Poder: Da habilidad a los soldados que lo acompañan : Da 2
+                  movimientos a 1 soldado si hay 3 juntos.</i>
+              </p>
+              <p>
+                <i>Debilidad: Pieza que determina el juego. Su exposición es
+                  peligrosa y su muerte determinante.</i>
+              </p>
+              <p><i>VALOR por unidad = 9</i></p>
+              <p><i>VALOR en terreno = 9</i></p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__textAlter start">
+              <h3>| ANANSI |</h3>
+              <p>
+                <span>La Araña es su aliada en tierra. Ella es la segunda al
+                  mando pero la más mortífera en el campo.</span>
+              </p>
+              <p class="iFirst"><i>Rol: Ejecuta la masacre.</i></p>
+              <p><i>Habilidad: 8 direcciones sin límite de alcance.</i></p>
+              <p><i>Poder: Renace desde el centro.</i></p>
+              <p>
+                <i>Debilidad: Es débil contra el Sacred Knight y el Rey.</i>
+              </p>
+              <p><i>VALOR por unidad = 15</i></p>
+              <p><i>VALOR en terreno = 15</i></p>
+            </div>
+            <div class="info__img">
+              <img src="./img/anansi.jpg" alt="" />
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__img">
+              <img src="./img/manson.jpg" alt="" />
+            </div>
+            <div class="info__textAlter start">
+              <h3>| MANSON |</h3>
+              <p>
+                <span>Su mejor amigo, el Espalda Plateada, dirige las defensas.
+                  El Gorila de mil años es el más fuerte defensor de las
+                  murallas, motivando a las primeras líneas para que
+                  resistan,</span>
+              </p>
+              <p class="iFirst"><i>Rol: Jefe de defensa.</i></p>
+              <p><i>Habilidad: Alto alcance.</i></p>
+              <p>
+                <i>Poder: Hace invunerables las defensas &LT;con 3 cabríos en
+                  su rango crea una pared y queda inmóvil>.</i>
+              </p>
+              <p><i>Debilidad: Poca cantidad de ellos en el terreno.</i></p>
+              <p><i>VALOR por unidad = 9</i></p>
+              <p><i>VALOR en terreno = 18</i></p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__textAlter start">
+              <h3>| MUJICA |</h3>
+              <p>
+                <span>El León, Sacred Knight, es el lider de las primeras lineas,
+                  tiene la habilidad de moverse por un plano diferente de
+                  conciencia, el guerrero elegido puede mirar más allá y
+                  moverse por la conciencia sagrada.</span>
+              </p>
+              <p class="iFirst"><i>Rol: Jefe de Ataque -Líder natural.</i></p>
+              <p>
+                <i>Habilidad: Mueve exagonalmente. Su patrón es único.</i>
+              </p>
+              <p><i>Poder: Puede transportar otras piezas.</i></p>
+              <p><i>Debilidad: No ataca piezas continuas.</i></p>
+              <p><i>VALOR por unidad = 6</i></p>
+              <p><i>VALOR en terreno = 18</i></p>
+              <p><i>*unidad central vale 7</i></p>
+            </div>
+            <div class="info__img">
+              <img src="./img/mujica.jpg" alt="" />
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__img">
+              <img src="./img/shung.jpg" alt="" />
+            </div>
+            <div class="info__textAlter start">
+              <h3>| SHUNG |</h3>
+              <p>
+                <span>El lobo es primordial en el campo de batalla porque es el
+                  maestro espiritual natural del grupo y al mismo tiempo es un
+                  guerrero sagrado.</span>
+              </p>
+              <p class="iFirst"><i>Rol: Chaman/ Guerrero sagrado.</i></p>
+              <p><i>Habilidad: Eleva la moral del grupo.</i></p>
+              <p>
+                <i>Poder: Permite al soldado propio moverse como él si está en
+                  su rango.</i>
+              </p>
+              <p><i>Debilidad: Poca movilidad en el terreno.</i></p>
+              <p><i>VALOR por unidad = 6</i></p>
+              <p><i>VALOR en terreno = 18</i></p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__textAlter start">
+              <h3>| PHILIP NEGRO |</h3>
+              <p>
+                <span>Los cabríos son las unidades de primera línea , una especie
+                  leal y valerosa que durante los 6666 años han sido el
+                  sacrificio preferido de los humanos.</span>
+              </p>
+              <p class="iFirst"><i>Rol: Soldado Leal.</i></p>
+              <p><i>Habilidad: En equipo es muy poderoso.</i></p>
+              <p><i>Poder: Se combina con todas las piezas.</i></p>
+              <p>
+                <i>Debilidad: Poco alcance. Solo captura y mueve hacia
+                  adelante.</i>
+              </p>
+              <p><i>VALOR por unidad = 3</i></p>
+              <p><i>VALOR en terreno = 18</i></p>
+            </div>
+            <div class="info__img">
+              <img src="./img/philpNegro.jpg" alt="" />
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__img">
+              <img src="./img/telsonMusk.jpg" alt="" />
+            </div>
+            <div class="info__textAlter start">
+              <h3>| TELSON MUST |</h3>
+              <p>
+                <span>Los humanos están liderados por el hombre más inteligente,
+                  creador de las últimas tecnologías/armas y lider intelecual
+                  de los movimientos militares.</span>
+              </p>
+              <p class="iFirst">
+                <i>Rol: Lider mental - Científico y diseñador/programador.</i>
+              </p>
+              <p>
+                <i>Habilidad: Genera sincronicidad en los movimientos de las
+                  máquinas.</i>
+              </p>
+              <p>
+                <i>Poder: Da 2 movimientos en un turno a 3 soldados
+                  alineados.</i>
+              </p>
+              <p><i>Debilidad: Si muere se caen todos los sistemas.</i></p>
+              <p><i>VALOR por unidad = 9</i></p>
+              <p><i>VALOR en terreno = 9</i></p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__textAlter start">
+              <h3>| THATCHER |</h3>
+              <p>
+                <span>La Emperatriz, capaz de moverse por todo el terreno es la
+                  encargada de apoyar al ejército e infiltrarse en las
+                  líneas.</span>
+              </p>
+              <p class="iFirst"><i>Rol: Líder de ejecución de ataque.</i></p>
+              <p><i>Habilidad: Gran control del terreno y distancia.</i></p>
+              <p>
+                <i>Poder: Mueve en las 6 direcciones sin límite de alcance.</i>
+              </p>
+              <p>
+                <i>Debilidad: Los caballeros estan fuera de su alcance.</i>
+              </p>
+              <p><i>VALOR por unidad = 15</i></p>
+              <p><i>VALOR en terreno = 15</i></p>
+            </div>
+            <div class="info__img">
+              <img src="./img/thatcher.jpg" alt="" />
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__img">
+              <img src="./img/tankrex.jpg" alt="" />
+            </div>
+            <div class="info__textAlter start">
+              <h3>| TANKREX |</h3>
+              <p>
+                <span>El jefe de la defensa la asumía la figura del Mech Raptor,
+                  el arma de largo alcance más efectiva jamás construida. Al
+                  mismo tiempo su coraza le permitía resistir lo más duros
+                  ataques.</span>
+              </p>
+              <p class="iFirst"><i>Rol: Jefe de defensa.</i></p>
+              <p>
+                <i>Habilidad: Puede atacar a distancia y puede defender.</i>
+              </p>
+              <p>
+                <i>Poder: Hace invunerables las defensas &lt;entre 3 peones
+                  crea una pared>.</i>
+              </p>
+              <p>
+                <i>Debilidad:: Poca cantidad de ellos sobre el terreno.</i>
+              </p>
+              <p><i>VALOR por unidad = 9</i></p>
+              <p><i>VALOR en terreno = 18</i></p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__textAlter start">
+              <h3>| DIAMONDBUSTER |</h3>
+              <p>
+                <span>El liderazgo de los soldados era comandado por este Mech,
+                  quién podía ver más allá en el terreno y lograr penetrar las
+                  defensas enemigas con mayor habilidad.</span>
+              </p>
+              <p class="iFirst">
+                <i>Rol: General del ataque-Líder natural.</i>
+              </p>
+              <p>
+                <i>Habilidad: Mueve en piezas a 30 grados formando exágonos y
+                  se mantiene en su color.</i>
+              </p>
+              <p>
+                <i>Poder: Puede cargar a un soldado con él y transportarlo.</i>
+              </p>
+              <p>
+                <i>Debilidad: No puede atacar a los enemigos cercanos.</i>
+              </p>
+              <p><i>VALOR por unidad = 6</i></p>
+              <p><i>VALOR en terreno = 18</i></p>
+            </div>
+            <div class="info__img">
+              <img src="./img/diamondbuster.jpg" alt="" />
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__img">
+              <img src="./img/francis.jpg" alt="" />
+            </div>
+            <div class="info__textAlter start">
+              <h3>| FRANCIS |</h3>
+              <p>
+                <span>El Bishop Pope es el lider espiritual de los humanos,
+                  entregando a todos los miembros sabiduría para trascender lo
+                  habitual.</span>
+              </p>
+              <p class="iFirst"><i>Rol: Maestro espiritual/ Guerrero.</i></p>
+              <p><i>Habilidad: Eleva la moral del grupo.</i></p>
+              <p>
+                <i>Poder: Permite al soldado propio moverse como él si está en
+                  su rango.</i>
+              </p>
+              <p><i>Debilidad:: Poca movilidad en el terreno.</i></p>
+              <p><i>VALOR por unidad = 6</i></p>
+              <p><i>VALOR en terreno = 18</i></p>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="info__sec">
+            <div class="info__textAlter start">
+              <h3>| MAT RYAN |</h3>
+              <p>
+                <span>La primera línea es compuesta por Drones, diseñados por la
+                  mente maestra, obedecen órdenes sin titubear y apoyan al
+                  resto de los generales en todas sus deciciones.</span>
+              </p>
+              <p class="iFirst"><i>Rol: Soldado Leal.</i></p>
+              <p><i>Habilidad: En equipo es muy poderoso.</i></p>
+              <p><i>Poder: Se combina con todas las piezas.</i></p>
+              <p>
+                <i>Debilidad: Poco alcance. Solo captura hacia adelante.</i>
+              </p>
+              <p><i>VALOR por unidad = 3</i></p>
+              <p><i>VALOR en terreno = 18</i></p>
+            </div>
+            <div class="info__img">
+              <img src="./img/matryan.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="info__descripciones__title" onclick="select(3)">
+          <h3>Geometría</h3>
+          <h4 id="info__descripciones__title3">⟩</h4>
+        </div>
+        <div class="info__geometria info__desc">
+          <img src="./img/geometria0.png" alt="" />
+          <p>
+            Tanto el tablero como las piezas del juego están basados en
+            geometría sagrada.
+          </p>
+          <img src="./img/geometria1.png" alt="" />
+          <p>
+            Esto quiere decir que su lógica es permanente, eterna y basada en
+            los principios más básicos de la lógica geométrica.
+          </p>
+          <img src="./img/geometria2.png" alt="" />
+        </div>
+
+        <div class="info__descripciones__title" onclick="select(4)">
+          <h3>Arquitectura</h3>
+          <h4 id="info__descripciones__title4">⟩</h4>
+        </div>
+        <div class="info__arquitectura info__desc">
+          <img src="./img/arquitectura0.jpg" alt="" />
+          <p>
+            Cada uno de los pasos para construir la complejidad de la
+            geometría se conecta a la complejidad propia de la proporción
+            humana y con esto a la creación de espacios habitables de
+            resonancia armónica con el universo y la vida.
+          </p>
+          <img src="./img/arquitectura1.png" alt="" />
+        </div>
+
+        <div class="info__descripciones__title" onclick="select(5)">
+          <h3>La guerra</h3>
+          <h4 id="info__descripciones__title5">⟩</h4>
+        </div>
+        <div class="info__laGuerra info__desc">
+          <img src="./img/laGuerra0.png" alt="" />
+          <p>
+            Los secretos de esta sabiduría ancestral contienen también el
+            poder y la gloria de una cosmovisión completa.
+          </p>
+          <img src="./img/laGuerra1.png" alt="" />
+          <p>
+            Esta será desafiada por subsiguientes cosmovisiones obligando a la
+            primera a estar preparada para defenderse.
+          </p>
+          <img src="./img/laGuerra2.png" alt="" />
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__chacruk">
+      <div class="footer__logo">
+        <a href="https://www.instagram.com/designumsignum/" target="_blank">
+          <img class="footer__img" src="./../img/Designum Marca.png" />
+        </a>
+      </div>
+
+      <div class="footer__contacto">
+        <p><span>Contacto</span></p>
+        <p>(0261) 339 8802</p>
+        <p>designumsignum@gmail.com</p>
+      </div>
+
+      <div class="footer__redes">
+        <div>
+          <a title="Whatsapp" href="https://api.whatsapp.com/send?phone=2613398802&text=Hola+quiero+info"
+            target="_blank">
+            <img src="../img/wp.png" />
+          </a>
+        </div>
+        <div>
+          <a title="Instagram" href="https://www.instagram.com/leobuccio/" target="_blank">
+            <img src="../img/ig.png" />
+          </a>
+        </div>
+        <div>
+          <a title="Facebook" href="https://www.facebook.com/Leobucciolima/" target="_blank">
+            <img src="../img/fb.png" />
+          </a>
+        </div>
+        <div>
+          <a title="Youtube" href="https://www.youtube.com/@chakruk1958" target="_blank">
+            <img src="../img/yt.png" />
+          </a>
+        </div>
+        <div>
+          <a title="Discord" href="https://discord.com/invite/5QKkh9WB66" target="_blank">
+            <img src="../img/dc.png" />
+          </a>
+        </div>
+        <div>
+          <a title="Twitch" href="https://www.twitch.tv/leobuccio" target="_blank">
+            <img src="../img/tw.png" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__semillero">
+      <p>Powered by</p>
+      <a href="https://semillero.tech/">
+        <img src="./img/quintoImpactoHorizontal.png" alt="" />
+      </a>
+      <a href="https://semillero.tech/">
+        <img src="./img/semillero.png" alt="" />
+      </a>
+    </div>
+  </footer>
+
+  <script src="./js/carrusel.js"></script>
+  <script src="./js/historia.js"></script>
+  <script type="module" src="./js/admin.js"></script>
+  <script type="module" src="./js/global.js"></script>
+  <script type="module" src="./js/combosPrev.js"></script>
+
+</body>
+
+</html>

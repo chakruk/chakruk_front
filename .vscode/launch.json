@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CrakrukApplication<crakruk>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.semillero.crakruk.CrakrukApplication",
+            //"mainClass": "http://localhost:8080",
+            "projectName": "chakruk",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<crakruk>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.semillero.crakruk.CrakrukApplication",
+            "projectName": "crakruk",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

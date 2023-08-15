@@ -1,0 +1,266 @@
+@import '../config/variables';
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 50rem;
+    margin: 5rem 0;
+    position: relative;        
+    overflow: hidden;
+
+    @media (max-width: 1024px) {
+        height: auto;
+    }
+
+    &__navbar {
+        width: 85%;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+
+            li {
+                width: calc(100% / 6);
+                color: white;
+                text-align: center;
+                font-family: 'CairoRegular';
+                font-size: 1.6rem;
+                background-color: black;
+                border-radius: 0.5rem 0.5rem 0 0;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__descripciones {
+        width: 85%;
+        height: 45rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden; 
+
+        @media (max-width: 1024px) {
+            height: auto;
+            overflow: none;
+            align-items: center;
+        }
+
+        &__title {
+            width: 95%;
+            height: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+            background-color: rgb(0, 0, 0);
+            border: 1px solid white;
+            border-radius: 0.5rem;
+            z-index: 5;
+
+            h3, h4 {
+                color: white;
+                font-family: 'CairoRegular';
+                font-size: 1.2rem;
+                margin: 0 1rem;
+            }
+
+            h4 {
+                transform: rotate(90deg);
+                transition: transform 0.5s;
+            }
+        }
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 0;  
+        background-color: rgb(32, 32, 32);
+        border-bottom: 1px solid white;
+        border-radius: 0 0 0.5rem 0.5rem;
+        transition: height 0.5s;
+        position: absolute;
+        top: 0;
+        overflow: scroll; 
+        
+        @media (max-width: 1024px) {
+            position: relative;
+            width: 95%;
+            height: 0;
+            border: none;
+            overflow: none;
+            top: -1.8rem;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &Portada {
+            width: 70%;
+            height: 40rem;
+            margin: 2.5rem 0;
+
+            @media (max-width: 1440px) {
+                width: 70%;
+            }
+
+            @media (max-width: 1100px) {
+                width: 90%;
+                height: auto;
+            }
+        
+        }
+
+        hr {
+            width: 70%;
+        }
+    }
+
+    &__textCentrado {
+        width: 90%;
+
+        p {
+            color: white;
+            font-size: 1.2rem;
+            font-family: 'CairoLight';
+            font-weight: 400;
+            margin-bottom: 1rem;
+            text-indent: 2rem;
+        }
+    }  
+
+    &__sec {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2rem;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        img {
+            max-width:  50%;
+            height: auto;
+            margin: 2.5rem 2rem;
+        }
+    }
+
+    &__img {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+        
+        img {
+            max-width: 80%;
+            max-height: 100%;
+            margin: 2.5rem 2rem;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
+        }
+    }
+    
+    &__textAlter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+        height: 100%;
+        margin: 0 2rem;
+
+        @media (max-width: 1024px) {
+            width: 90%;
+        }
+
+        p {
+            color: white;
+            font-size: 1.2rem;
+            font-family: 'CairoLight';
+            font-weight: 400;
+            text-indent: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .start {
+        justify-content: flex-start;
+
+        h3 {
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            font-family: 'CairoBold';
+            font-weight: 400;
+            text-indent: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+            margin-bottom: 0.25rem;
+
+            span {
+                font-size: 1rem;
+                font-family: 'CairoBold';
+            }
+        }
+
+        .iFirst {
+            margin-top: 1rem;
+        }
+
+    }
+
+    &__subtitle {
+        color: white;
+        font-size: 2rem;
+        font-family: 'CairoLight';
+        font-weight: 400;
+        text-indent: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__geometria, &__arquitectura, &__laGuerra {
+        width: 94%;
+
+        img {
+            max-width: 90%;
+            height: auto;
+            margin: 2.5rem 0;
+        }
+
+        p {
+            color: white;
+            font-size: 1.2rem;
+            font-family: 'CairoLight';
+            font-weight: 400;
+            text-indent: 2rem;
+            width: 85%;
+            margin-bottom: 1rem;
+        }
+    }
+}
