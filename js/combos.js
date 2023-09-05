@@ -2,7 +2,8 @@
 import { getUser, message } from './global.js'
 
 let add = false
-const baseUrl = "https://test.backchakruk.quinto.site/"
+// const baseUrl = "https://test.backchakruk.quinto.site/"
+const baseUrl = "http://149.50.131.196:8080/chakruk-0.0.1-SNAPSHOT/"
 // const baseUrl = "http://localhost:8080/"
 
 
