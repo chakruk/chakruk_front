@@ -2,8 +2,8 @@ import { deleteCombo } from "./combos.js";
 import { deleteNew } from "./novedades.js";
 import { altaUsuario, bajaUsuario, cambiarStatus } from './admin.js'
 
-// const baseUrl = "https://test.backchakruk.quinto.site/"
-const baseUrl = "http://149.50.131.196:8080/chakruk-0.0.1-SNAPSHOT/"
+const baseUrl = "/apiredirect/"
+// const baseUrl = "http://149.50.131.196:8080/chakruk-0.0.1-SNAPSHOT/"
 // const baseUrl = "http://localhost:8080/";
 
 const navLink = document.getElementById("navSelected"); // --> Colorea el nav correspondiente a la seccion
