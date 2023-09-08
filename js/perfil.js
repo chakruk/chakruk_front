@@ -1,7 +1,8 @@
 import { message } from "./global.js"
 
-// const baseUrl = "https://test.backchakruk.quinto.site/"
-const baseUrl = "http://149.50.131.196:8080/chakruk-0.0.1-SNAPSHOT/"
+
+// const baseUrl = "http://149.50.131.196:8080/chakruk-0.0.1-SNAPSHOT/"
+const baseUrl = "/apiredirect/"
 // const baseUrl = "http://localhost:8080/"  //==> ingresar baseUrl personal
 
 
