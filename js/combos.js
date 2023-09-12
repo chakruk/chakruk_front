@@ -109,7 +109,7 @@ function loadData(combos) {
         editCompra.style.height = '2.6rem'
         editCompra.style.paddingLeft = '1.5rem'
         editCompra.className = 'editCombo' + combos[i].id.toString()
-        console.log(combos[i].link);
+        // console.log(combos[i].link);
         editCompra.placeholder ="link mercado pago"
         editCompra.value = combos[i].link
 
