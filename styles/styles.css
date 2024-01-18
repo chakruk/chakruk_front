@@ -27,6 +27,60 @@
   font-family: "CairoRegular";
   src: url("./../../fonts/Cairo/Cairo-Regular.ttf");
 }
+h1, h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff; /* Cambiado a texto blanco para mejorar visibilidad en fondo oscuro */
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ccc; /* Cambiado a un tono más claro para mejorar visibilidad en fondo oscuro */
+  text-align: justify; /* Justificado el texto */
+}
+
+.noticias {
+  max-width: 800px; /* Ajustado el ancho máximo para pantallas de laptop */
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 15px;
+  color: #4e8cff; /* Color azul más oscuro para enlaces */
+}
+
+.platform-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.novedades {
+  margin-top: 30px;
+}
+
+.novedad {
+  border-bottom: 1px solid #555; /* Color más oscuro para la línea de separación */
+  padding: 10px 0;
+}
+
+.novedad h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff; /* Cambiado a texto blanco para mejorar visibilidad en fondo oscuro */
+}
+
+.novedad p {
+  font-size: 14px;
+  color: #ccc; /* Cambiado a un tono más claro para mejorar visibilidad en fondo oscuro */
+  text-align: justify; /* Justificado el texto */
+}
 
 .register {
   display: flex;
@@ -2184,7 +2238,7 @@
   flex-direction: column;
   width: 30%;
   height: 10rem;
-  position: relative; 
+  position: relative;
   justify-content: end;
   align-self: flex-end;
   margin: 0 1rem 3rem 0;
@@ -2952,11 +3006,13 @@
   align-items: center;
   float: right;
 }
+
 @media (max-width:1024px) {
   .novedadForm__imgDiv {
     width: 80%;
   }
 }
+
 .novedadForm__imgDiv img {
   max-width: 100%;
   max-height: 90%;

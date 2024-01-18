@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="./../img/favicon.png">
     <title>Chakruk | Novedades</title>
 </head>
+
 <body>
     <header class="header">
         <div class="header__main">
@@ -24,7 +26,7 @@
                 <h2><a href="preventa.html">Preventa</a></h2>
             </div>
             <div class="header__navbarItem">
-                <h2><a href="novedades.html" id="navSelected">Novedades</a></h2>    
+                <h2><a href="novedades.html" id="navSelected">Novedades</a></h2>
             </div>
             <div class="header__navbarItem">
                 <h2><a href="comunidad.html">Comunidad</a></h2>
@@ -62,7 +64,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="header__loginForm">
         <div class="header__loginUser">
             <button class="header__close">X</button>
@@ -92,7 +94,7 @@
                         <div class="right"></div>
                     </button>
                 </div>
-            </div>                
+            </div>
         </div>
 
         <div class="header__regist">
@@ -100,112 +102,122 @@
             <h2>Información Personal</h2>
             <form class="header__form">
                 <div class="header__registUsername">
-                  <label for="username">Nombre de usuario</label>
-                  <input type="text" name="username"  placeholder="ingrese nombre de usuario"  id="username" required />
+                    <label for="username">Nombre de usuario</label>
+                    <input type="text" name="username" placeholder="ingrese nombre de usuario" id="username" required />
                 </div>
                 <div class="header__registName">
-                  <div>
-                    <label for="name">Nombre</label>
-                    <input type="text" name="name" id="name" placeholder="ingrese su nombre" required />
-                  </div>
-                  <div>
-                    <label for="lastName">Apellido</label>
-                    <input type="text" name="LastName" id="LastName" placeholder="ingrese su apellido" required />
-                  </div>
+                    <div>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" placeholder="ingrese su nombre" required />
+                    </div>
+                    <div>
+                        <label for="lastName">Apellido</label>
+                        <input type="text" name="LastName" id="LastName" placeholder="ingrese su apellido" required />
+                    </div>
                 </div>
                 <div class="header__registEmail">
-                  <label for="email">Correo Electrónico</label>
-                  <input type="text" name="email" id="email" required  placeholder="Ingrese su correo electrónico personal gmail o hotmail"/>
+                    <label for="email">Correo Electrónico</label>
+                    <input type="text" name="email" id="email" required
+                        placeholder="Ingrese su correo electrónico personal gmail o hotmail" />
                 </div>
                 <div class="header__registDiv">
-                  <div class="header__registPassDiv">
-                    <div class="header__registPass">
-                      <label for="passReg">Ingrese su Contraseña</label>
-                      <input
-                        class="header__registPassIn"
-                        type="password"
-                        name="passReg"
-                        id="passReg"
-                        placeholder="8 caracteres min."
-                        required
-                      />
+                    <div class="header__registPassDiv">
+                        <div class="header__registPass">
+                            <label for="passReg">Ingrese su Contraseña</label>
+                            <input class="header__registPassIn" type="password" name="passReg" id="passReg"
+                                placeholder="8 caracteres min." required />
+                        </div>
+                        <div class="header__registPass">
+                            <label for="repass">Repita su Contraseña</label>
+                            <input class="header__registPassIn" type="password" name="repass" id="repass"
+                                placeholder="8 caracteres min." required />
+                        </div>
                     </div>
-                    <div class="header__registPass">
-                      <label for="repass">Repita su Contraseña</label>
-                      <input
-                        class="header__registPassIn"
-                        type="password"
-                        name="repass"
-                        id="repass"
-                        placeholder="8 caracteres min."
-                        required
-                      />
+
+                    <div class="header__registImg">
+                        <div class="header__registSel">
+                            <div>
+                                <label for="imgSelect">Avatar</label>
+                                <select name="imgSelect" id="imgSelect">
+                                    <option value="rey" selected>Rey</option>
+                                    <option value="reina">Reina</option>
+                                    <option value="alfil">Alfil</option>
+                                    <option value="caballo">Caballo</option>
+                                    <option value="torre">Torre</option>
+                                    <option value="peon">Peon</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="imgColor">Facción</label>
+                                <select name="imgColor" id="imgColor">
+                                    <option value="animal" selected>Animal</option>
+                                    <option value="mech">Mech</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="header__registImgDiv">
+                            <img id="header__avatar" src="" alt="" />
+                        </div>
                     </div>
-                  </div>
-      
-                  <div class="header__registImg">
-                    <div class="header__registSel">
-                      <div>
-                        <label for="imgSelect">Avatar</label>
-                        <select name="imgSelect" id="imgSelect">
-                          <option value="rey" selected>Rey</option>
-                          <option value="reina">Reina</option>
-                          <option value="alfil">Alfil</option>
-                          <option value="caballo">Caballo</option>
-                          <option value="torre">Torre</option>
-                          <option value="peon">Peon</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label for="imgColor">Facción</label>
-                        <select name="imgColor" id="imgColor">
-                          <option value="animal" selected>Animal</option>
-                          <option value="mech">Mech</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="header__registImgDiv">
-                      <img id="header__avatar" src="" alt="" />
-                    </div>
-                  </div>
                 </div>
-      
+
                 <div class="btn">
-                  <button id="createBtn" type="submit" disabled>
-                    <span>CREAR CUENTA</span>
-                    <div class="top"></div>
-                    <div class="left"></div>
-                    <div class="bottom"></div>
-                    <div class="right"></div>
-                  </button>
+                    <button id="createBtn" type="submit" disabled>
+                        <span>CREAR CUENTA</span>
+                        <div class="top"></div>
+                        <div class="left"></div>
+                        <div class="bottom"></div>
+                        <div class="right"></div>
+                    </button>
                 </div>
-              </form>       
+            </form>
         </div>
     </div>
 
-    <div class="sections">
+    <div class="sections noticias">
         <button class="admin" id="addNovedad">AGREGAR NOVEDAD</button>
+        <h1>Explora las Novedades</h1>
+        <p>Descubre las últimas actualizaciones y mejoras en Chakruk 2D.</p>
+        <div class="novedades">
+            <div class="novedad">
+                <h2>Versión Torneo 2022 para PC (Windows)</h2>
+                <p>¡Experimenta el torneo con nuevas funciones y mejoras emocionantes!</p>
+                <a href="https://leobuccio.itch.io/chakruk-2d" target="_blank" rel="noopener noreferrer">
+                    <img src="../img/win.png" alt="PC Icon" class="platform-icon">
+                    Más detalles y Descarga para PC 
+                </a>
+            </div>
+            <div class="novedad">
+                <h2>Última versión para Android</h2>
+                <p>¡Descarga la versión más reciente y disfruta del juego en tu dispositivo Android!</p>
+                <a href="https://play.google.com/apps/internaltest/4701090295691288539" target="_blank" rel="noopener noreferrer">
+                    <img src="../img/android.png" alt="Android Icon" class="platform-icon">
+                    Descargar para Android (Google Drive)
+                </a>
+            </div>
+        </div>
         <div class="novedadForm"></div>
-        <div class="novedades"></div>
     </div>
+    
 
-    <footer class="footer"> 
+    <footer class="footer">
         <div class="footer__chacruk">
             <div class="footer__logo">
                 <a href="https://www.instagram.com/designumsignum/" target="_blank">
                     <img class="footer__img" src="./../img/Designum Marca.png">
                 </a>
             </div>
-    
+
             <div class="footer__contacto">
                 <p><span>Contacto</span></p>
                 <p>(0261) 339 8802</p>
                 <p>designumsignum@gmail.com</p>
             </div>
-    
+
             <div class="footer__redes">
                 <div>
-                    <a title="Whatsapp" href="https://api.whatsapp.com/send?phone=2613398802&text=Hola+quiero+info" target="_blank">
+                    <a title="Whatsapp" href="https://api.whatsapp.com/send?phone=2613398802&text=Hola+quiero+info"
+                        target="_blank">
                         <img src="../img/wp.png">
                     </a>
                 </div>
@@ -230,27 +242,28 @@
                     </a>
                 </div>
                 <div>
-                    <a  title="Twitch" href="https://www.twitch.tv/leobuccio" target="_blank">
+                    <a title="Twitch" href="https://www.twitch.tv/leobuccio" target="_blank">
                         <img src="../img/tw.png">
                     </a>
                 </div>
-            </div>  
-        </div> 
+            </div>
+        </div>
 
         <div class="footer__semillero">
             <p>Powered by</p>
             <a href="https://semillero.tech/">
-              <img src="./../img/quintoImpactoHorizontal.png" alt="" />
+                <img src="./../img/quintoImpactoHorizontal.png" alt="" />
             </a>
             <a href="https://semillero.tech/">
-              <img src="./../img/semillero.png" alt="" />
+                <img src="./../img/semillero.png" alt="" />
             </a>
-        </div>  
-        
+        </div>
+
     </footer>
 
     <script type="module" src="./../js/admin.js"></script>
     <script type="module" src="../js/global.js"></script>
     <script type="module" src="../js/novedades.js"></script>
 </body>
+
 </html>
