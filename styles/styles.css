@@ -29,15 +29,18 @@
 }
 
 h1, h2 {
-  font-size: 24px;
+
   margin-bottom: 20px;
-  color: #fff;
+  color: white;
+  font-family: "CairoBold";
+  font-size: 2rem;
   /* Cambiado a texto blanco para mejorar visibilidad en fondo oscuro */
 }
 
 p {
   font-size: 16px;
   line-height: 1.5;
+  font-family: "CairoRegular";
   color: #ccc;
   /* Cambiado a un tono más claro para mejorar visibilidad en fondo oscuro */
   text-align: justify;
@@ -46,11 +49,11 @@ p {
 
 .noticias {
   max-width: 800px;
+  background-color: #2020207b;
   /* Ajustado el ancho máximo para pantallas de laptop */
   margin: 40px auto;
   padding: 40px;
-  border-radius: 10px;
-}
+  }
 
 a {
   display: flex;
@@ -58,6 +61,7 @@ a {
   text-decoration: none;
   margin-bottom: 15px;
   color: #4e8cff;
+  font-family: "CairoBold";
   /* Color azul más oscuro para enlaces */
 }
 
@@ -69,6 +73,8 @@ a {
 
 .novedades {
   margin-top: 30px;
+  /* background: #20202052; */
+  border-radius: 18px;
 }
 
 .novedad {
@@ -80,7 +86,9 @@ a {
 .novedad h2 {
   font-size: 18px;
   margin-bottom: 10px;
+  font-family: "CairoBold";
   color: #fff;
+
   /* Cambiado a texto blanco para mejorar visibilidad en fondo oscuro */
 }
 
@@ -89,6 +97,7 @@ a {
   color: #ccc;
   /* Cambiado a un tono más claro para mejorar visibilidad en fondo oscuro */
   text-align: justify;
+  font-family: "CairoBold";
   /* Justificado el texto */
 }
 
@@ -382,15 +391,6 @@ a {
   }
 }
 
-.header__login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: auto;
-  height: 100%;
-  text-align: center;
-  margin-right: 3rem;
-}
 
 @media (max-width: 1500px) {
   .header__login {
